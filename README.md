@@ -1,7 +1,7 @@
 ### Hi there, I'm Bhagyesh Sunil Patel 👋 [<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 
 
-- 🤔 I’m looking for help with Javascript for SmoothValidator
+- 🤔 I’m looking for help with Javascript for [SmoothValidator](https://github.com/uzrnem/smooth-validator)
 
 ### JavaScript / NodeJS Apps
 
