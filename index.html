@@ -3,6 +3,32 @@
     <link rel="stylesheet" href="./cards.css">
     <link rel="stylesheet" href="./columns.css">
     <link rel="stylesheet" href="./padding-margin.css">
+    <style>
+      div.flag {
+        border-top: 1.4rem solid blue;
+        border-bottom: .6rem solid transparent;
+        border-left: 4rem solid blue;
+        border-right: 4rem solid blue;
+        color:red;
+        height:0;
+        width:0;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      div.flag div.label::before {
+        content: attr(title);
+        display: block;
+        position: absolute;
+        top: -1.6rem;
+        right: -2.5rem;
+        font-size: 1.2rem;
+        color: aliceblue;
+      }
+      .card {
+        position: relative;
+      }
+    </style>
   </head>
   <body class="my-3 mx-2">
     <h4>Projects</h4>
@@ -10,8 +36,10 @@
       <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">MySQL</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Database @3306</h6>
+            <h5 class="card-title">MySQL @3306</h5>
+            <div class="flag">
+              <div class="label" title="Database"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:8000">phpMyAdmin:8000</a>
           </div>
         </div>
@@ -19,8 +47,21 @@
       <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">MongoDB</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Database @27017</h6>
+            <h5 class="card-title">Redis @6379</h5>
+            <div class="flag">
+              <div class="label" title="Database"></div>
+            </div>
+            <a class="card-link" target="_blank" href="http://localhost:8001">commander:8001</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">MongoDB @27017</h5>
+            <div class="flag">
+              <div class="label" title="Database"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:8002">express-ui:8002</a>
           </div>
         </div>
@@ -38,7 +79,9 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Expense APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Github</h6>
+            <div class="flag">
+              <div class="label" title="Github"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9000">9000</a>
           </div>
         </div>
@@ -48,7 +91,9 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Stock APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Bitbucket</h6>
+            <div class="flag">
+              <div class="label" title="Bitbucket"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9005">9005</a>
           </div>
         </div>
@@ -58,7 +103,9 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">FileServer APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Github</h6>
+            <div class="flag">
+              <div class="label" title="Github"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9040">9040</a>
           </div>
         </div>
@@ -68,7 +115,9 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Nottebukk APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Bitbucket</h6>
+            <div class="flag">
+              <div class="label" title="Bitbucket"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9010">9010</a>
             <a class="card-link" target="_blank" href="https://nottebukk.firebaseapp.com">Nottebukk</a>
           </div>
@@ -79,7 +128,9 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Devtul APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Bitbucket</h6>
+            <div class="flag">
+              <div class="label" title="Bitbucket"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9015">9015</a>
             <a class="card-link" target="_blank" href="https://devtul.firebaseapp.com">Devtul</a>
           </div>
@@ -90,28 +141,34 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Gemtul APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Bitbucket</h6>
+            <div class="flag">
+              <div class="label" title="Bitbucket"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9020">9020</a>
             <a class="card-link" target="_blank" href="https://gemtul.firebaseapp.com">Gemtul</a>
           </div>
         </div>
       </div>
 
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
+      <!-- div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">CodeBook APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Bitbucket</h6>
+            <div class="flag">
+              <div class="label" title="Bitbucket"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9025">9025</a>
           </div>
         </div>
-      </div>
+      </div -->
 
       <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">PassBook APP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Github</h6>
+            <div class="flag">
+              <div class="label" title="Github"></div>
+            </div>
             <a class="card-link" target="_blank" href="http://localhost:9030">9030</a>
           </div>
         </div>
@@ -124,7 +181,7 @@
     <h4>Editor</h4>
     <button onclick="saveData()">Save it</button>
     <button onclick="clearData()">Clear it</button>
-    <div id="editData" contenteditable="" class="m-3" style="overflow-y: hidden;min-height: 470px;border: 1px solid;">
+    <div id="editData" contenteditable="" class="m-3 p-2" style="overflow-y: hidden;min-height: 470px;border: 1px solid;">
     </div>
   </body>
   <script>
