@@ -5,182 +5,57 @@
     <link rel="stylesheet" href="./padding-margin.css">
     <style>
       div.flag {
-        border-top: 1.4rem solid blue;
-        border-bottom: .6rem solid transparent;
-        border-left: 4rem solid blue;
-        border-right: 4rem solid blue;
+        border: 1.5rem solid #0000ffb8;
+        border-bottom-color: transparent;
         color:red;
         height:0;
         width:0;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -1px;
+        right: -1px;
+        z-index: -1;
+        border-radius: 0 var(--bs-card-border-radius) 0 0;
       }
       div.flag div.label::before {
         content: attr(title);
         display: block;
         position: absolute;
         top: -1.6rem;
-        right: -2.5rem;
+        right: -.8rem;
         font-size: 1.2rem;
-        color: aliceblue;
+        color: #f2e1ff;
       }
       .card {
         position: relative;
+        background-color: transparent !important;
+        border-color: #0000ffb8;
+      }
+      .card-title {
+        margin-top: 0 !important;
+      }
+      .horizontal {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .col-1 {
+        width: 12rem;
+      }
+      h5 {
+        text-shadow: 2px 2px 2px #69adc7;
       }
     </style>
   </head>
   <body class="my-3 mx-2">
-    <h4>Projects</h4>
-    <div class="row">
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">MySQL @3306</h5>
-            <div class="flag">
-              <div class="label" title="Database"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:8000">phpMyAdmin:8000</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Redis @6379</h5>
-            <div class="flag">
-              <div class="label" title="Database"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:8001">commander:8001</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">MongoDB @27017</h5>
-            <div class="flag">
-              <div class="label" title="Database"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:8002">express-ui:8002</a>
-          </div>
-        </div>
-      </div>
-      <!-- div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Redis</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Database @6379</h6>
-            <a class="card-link" target="_blank" href="http://localhost:8002" class="card-link">express-ui:8002</a>
-          </div>
-        </div>
-      </div -->
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Expense APP</h5>
-            <div class="flag">
-              <div class="label" title="Github"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9000">9000</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Stock APP</h5>
-            <div class="flag">
-              <div class="label" title="Bitbucket"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9005">9005</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">FileServer APP</h5>
-            <div class="flag">
-              <div class="label" title="Github"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9040">9040</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Nottebukk APP</h5>
-            <div class="flag">
-              <div class="label" title="Bitbucket"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9010">9010</a>
-            <a class="card-link" target="_blank" href="https://nottebukk.firebaseapp.com">Nottebukk</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Devtul APP</h5>
-            <div class="flag">
-              <div class="label" title="Bitbucket"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9015">9015</a>
-            <a class="card-link" target="_blank" href="https://devtul.firebaseapp.com">Devtul</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Gemtul APP</h5>
-            <div class="flag">
-              <div class="label" title="Bitbucket"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9020">9020</a>
-            <a class="card-link" target="_blank" href="https://gemtul.firebaseapp.com">Gemtul</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">CodeBook APP</h5>
-            <div class="flag">
-              <div class="label" title="Bitbucket"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9025">9025</a>
-          </div>
-        </div>
-      </div -->
-
-      <div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">PassBook APP</h5>
-            <div class="flag">
-              <div class="label" title="Github"></div>
-            </div>
-            <a class="card-link" target="_blank" href="http://localhost:9030">9030</a>
-          </div>
-        </div>
-      </div>
+    <h4 class="mb-0">Projects</h4>
+    <div class="horizontal">
+      <div id="card-row" class="row p-3"></div>
     </div>
 
-    <a target="_blank" href="data:text/html, &lt;html contenteditable&gt;">data:text/html, &lt;html contenteditable&gt;</a>
-    <a target="_blank" href="https://classroom.udacity.com/courses/ud513">https://classroom.udacity.com/courses/ud513</a>
-
-    <h4>Editor</h4>
-    <button onclick="saveData()">Save it</button>
-    <button onclick="clearData()">Clear it</button>
+    <h4 class="mb-0 mt-2">Editor
+      <button onclick="saveData()">Save it</button>
+      <button onclick="clearData()">Clear it</button>
+    </h4>
     <div id="editData" contenteditable="" class="m-3 p-2" style="overflow-y: hidden;min-height: 470px;border: 1px solid;">
     </div>
   </body>
@@ -193,10 +68,117 @@
       localStorage.setItem("content", "");
       document.getElementById("editData").innerHTML = "";
     }
+
+    var cards = [
+      {
+        name: "MySQL @3306", title: "DB",
+        links: [
+          { "phpMyAdmin:8000": "http://localhost:8000" }
+        ]
+      },
+      {
+        name: "Redis @6379", title: "DB",
+        links: [
+          { "commander:8001": "http://localhost:8001" }
+        ]
+      },
+      {
+        name: "Mongo @27017", title: "DB",
+        links: [
+          { "express-ui:8002": "http://localhost:8002" }
+        ]
+      },
+      {
+        name: "Expense APP", title: "Git",
+        links: [
+          { "9000": "http://localhost:9000" }
+        ]
+      },
+      {
+        name: "Stock APP", title: "Bit",
+        links: [
+          { "9005": "http://localhost:9005" }
+        ]
+      },
+      {
+        name: "FileServer APP", title: "Git",
+        links: [
+          { "9040": "http://localhost:9040" }
+        ]
+      },
+      {
+        name: "Nottebukk APP", title: "Bit",
+        links: [
+          { "9010": "http://localhost:9010", "Nottebukk": "https://nottebukk.firebaseapp.com" }
+        ]
+      },
+      {
+        name: "Devtul APP", title: "Bit",
+        links: [
+          { "9015": "http://localhost:9015" },{ "Devtul": "https://devtul.firebaseapp.com" }
+        ]
+      },
+      {
+        name: "Gemtul APP", title: "Bit",
+        links: [
+          { "9020": "http://localhost:9020" },{ "Gemtul": "https://gemtul.firebaseapp.com" }
+        ]
+      },
+      {
+        name: "CodeBook APP", title: "Bit",
+        links: [
+          { "9025": "http://localhost:9025" }
+        ]
+      },
+      {
+        name: "PassBook APP", title: "Git",
+        links: [
+          { "9030": "http://localhost:9030" }
+        ]
+      }
+    ];
+    var cardRow = document.getElementById("card-row");
+    cardRow.setAttribute("style", "width:" + (cards.length * 13.5 + 1.5 ) + "rem")
+
+    cards.forEach(card => {
+      var bodyDiv = getElement("div", "card-body", null, [
+        getElement("h5", "card-title", card.name),
+        getElement("div", "flag", null, [
+          getElement("div", "label", null, [], card.title)
+        ])
+      ])
+      card.links.forEach(link => {
+        for (const [key, value] of Object.entries(link)) {
+          bodyDiv.appendChild(getLink(key, value));
+        }
+      });
+      cardRow.appendChild(getElement("div", "col-1", null, [
+        getElement("div", "card", null, [bodyDiv])
+      ]))
+    });
+
+    function getLink(title, link) {
+      var a = document.createElement('a');
+      a.innerText = title;
+      a.setAttribute("class", "card-link");
+      a.href = link;
+      a.target = "_blank";
+      return a
+    }
+
+    function getElement(type, className, innerText = null, childs = [], title = null) {
+      var element = document.createElement(type);
+      element.setAttribute("class", className);
+      if (title) { element.title = title; }
+      if (innerText) { element.innerText = innerText; }
+      childs.forEach(child => { element.appendChild(child) })
+      return element;
+    }
+
   </script>
 </html>
 
-<!-- div class="col-1 col-lg-2 col-md-3 col-sm-4 mb-2" style="width: 18rem;">
+<!-- div class="col-1" style="width: 18rem;">
   <div class="card">
     <div class="card-header">
       Featured
