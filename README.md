@@ -7,6 +7,7 @@
 | --- | --- | --- |
 | Java Games | Snake, PushBox and Tetris | https://github.com/uzrnem/java-games |
 | Bricks Console | Racing, Frogger, Tetris, Snake and Tank | https://github.com/uzrnem/bricks-game-in-html-javascript |
+|| Badam Satti| |
 
 #### Project List
 
